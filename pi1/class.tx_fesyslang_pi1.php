@@ -71,9 +71,8 @@ class tx_fesyslang_pi1 extends tslib_pibase {
 					$fields = array(
 						'tx_fesyslang_lang_uid' => $currSetting,
 					);
-					$sql = $GLOBALS['TYPO3_DB']->UPDATEquery('fe_users', 
+					$GLOBALS['TYPO3_DB']->exec_UPDATEquery('fe_users', 
 					             'uid='.$GLOBALS['TSFE']->fe_user->user['uid'], $fields);
-					$res = $GLOBALS['TYPO3_DB']->sql(TYPO3_db, $sql);
 				}
 			}
 		}	
